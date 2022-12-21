@@ -17,7 +17,7 @@ public class MemberVo {
 	private String name;
 	private String email;
 	private int phone;
-	private String mauthcode;
+	
 	
 	public MemberVo() {
 		super();
@@ -26,7 +26,7 @@ public class MemberVo {
 	@Override
 	public String toString() {
 		return "MemberVo [id=" + id + ", pw=" + pw + ", name=" + name + ", email=" + email + ", phone=" + phone
-				+ ", mauthcode=" + mauthcode + "]";
+				+ ", ";
 	}
 
 	public String getId() {
@@ -41,14 +41,7 @@ public class MemberVo {
 		return pw;
 	}
 
-	public String getMauthcode() {
-		return mauthcode;
-	}
-
-	public void setMauthcode(String mauthcode) {
-		this.mauthcode = mauthcode;
-	}
-
+	
 	public void setPw(String pw) {
 		this.pw = pw;
 	}

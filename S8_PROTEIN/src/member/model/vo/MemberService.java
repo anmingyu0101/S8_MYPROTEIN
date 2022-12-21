@@ -50,10 +50,10 @@ public class MemberService {
 		close(conn);
 		return vo;
 	}
-	public MemberVo login(String id, String pw){
+	public MemberVo login(String id, String pw, String name, String email, String phone){
 		MemberVo vo = null;
 		Connection conn = getConnection();
-		vo = dao.login(conn, id, pw);
+		vo = dao.login(conn, id, pw, name, email, phone );
 		close(conn);
 		return vo;
 	}
