@@ -50,16 +50,7 @@ public class OrderMemberDao {
 			}
 		
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		return vo;
 	}
 }

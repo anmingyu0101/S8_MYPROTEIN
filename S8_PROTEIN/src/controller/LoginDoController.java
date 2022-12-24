@@ -31,12 +31,10 @@ public class LoginDoController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			String id = request.getParameter("id");
 			String pw = request.getParameter("pw");
-			String name = request.getParameter("name");
-			String email = request.getParameter("email");
-			String phone = request.getParameter("phone");
+		
 			
 			MemberService service = new MemberService();
-			MemberVo loginInfo = service.login(id, pw, name, email, phone);
+			MemberVo loginInfo = service.login(id, pw);
 			if(loginInfo!=null) {
 //				if(loginInfo.getMauthcode().equals("1")) {
 //					System.out.println("로그인 성공");

@@ -3,7 +3,7 @@ package member.model.vo;
 import java.sql.*;
 import java.util.*;
 
-import common.filter.JdbcTemplate;
+import Jdbc.JdbcTemplate;
 
 public class MemberDao {
 
@@ -31,7 +31,7 @@ public class MemberDao {
 		return vo;
 	}
 	
-	public MemberVo login(Connection conn, String id, String pw, String name, String email, String phone){
+	public MemberVo login(Connection conn, String id, String pw){
 		MemberVo vo = null;
 		
 		String query = "select id, name from member where id=? and pw=?";
@@ -41,9 +41,7 @@ public class MemberDao {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, id);
 			pstmt.setString(2, pw);
-			pstmt.setString(3, name);
-			pstmt.setString(4, email);
-			pstmt.setString(5, phone);
+			
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				vo = new MemberVo();

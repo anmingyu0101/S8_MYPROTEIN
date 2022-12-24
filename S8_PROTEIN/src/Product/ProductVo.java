@@ -1,9 +1,19 @@
-package Cart;
+package Product;
 
 import java.sql.*;
 
-public class CartVo {
+public class ProductVo {
  
+	private int product_no;
+	private String product_name;
+	private String product_price;
+	private String product_desc;
+	@Override
+	public String toString() {
+		return "CartVo [product_no=" + product_no + ", product_name=" + product_name + ", product_price="
+				+ product_price + ", product_desc=" + product_desc + "]";
+	}
+	
 	public int getProduct_no() {
 		return product_no;
 	}
@@ -27,14 +37,5 @@ public class CartVo {
 	}
 	public void setProduct_desc(String product_desc) {
 		this.product_desc = product_desc;
-	}
-	private int product_no;
-	private String product_name;
-	private String product_price;
-	private String product_desc;
-	@Override
-	public String toString() {
-		return "CartVo [product_no=" + product_no + ", product_name=" + product_name + ", product_price="
-				+ product_price + ", product_desc=" + product_desc + "]";
 	}
 }

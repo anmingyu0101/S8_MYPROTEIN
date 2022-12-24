@@ -1,6 +1,6 @@
 package OrderMember;
 
-import static common.filter.JdbcTemplate.*;
+import static Jdbc.JdbcTemplate.*;
 
 import java.sql.Connection;
 import java.util.List;
@@ -26,6 +26,7 @@ public class OrderMemberService {
 		Connection conn = getConnection();
 		result = dao.update(conn, vo, order_no);
 		if(result > 0) commit(conn);
+		else rollback(conn);
 		close(conn);
 		return result;
 		

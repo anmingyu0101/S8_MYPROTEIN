@@ -1,14 +1,15 @@
-package member.model.vo;
+package Product;
 
 import static Jdbc.JdbcTemplate.*;
 
 import java.sql.Connection;
 import java.util.List;
 
-public class MemberService {
-	private MemberDao dao = new MemberDao();
+
+public class ProductService {
+	private ProductDao dao = new ProductDao();
 	
-	public int insert(MemberVo vo) {
+	public int insert(ProductVo vo) {
 		int result = 0;
 		Connection conn = getConnection();
 		result = dao.insert(conn, vo);
@@ -16,46 +17,47 @@ public class MemberService {
 		else rollback(conn);
 		close(conn);
 		return result;
-		
 	}
-	public int update(MemberVo vo, String id) {
+	
+	public int update(ProductVo vo, int product_no) {
 		int result = 0;
 		Connection conn = getConnection();
-		result = dao.update(conn, vo, id);
+		result = dao.update(conn, vo, product_no);
 		if(result > 0) commit(conn);
 		else rollback(conn);
 		close(conn);
 		return result;
 	}
-	public int delete(String id) {
+	public int delete(int product_no) {
 		int result = 0;
 		Connection conn = getConnection();
-		result = dao.delete(conn, id);
+		result = dao.delete(conn, product_no);
 		if(result > 0) commit(conn);
 		else rollback(conn);
-		close(conn);	
 		return result;
 	}
-	public List<MemberVo> selectList(){
-		List<MemberVo> volist = null;
+	public List<ProductVo> selectList(){
+		List<ProductVo> volist = null;
 		Connection conn = getConnection();
 		volist = dao.selectList(conn);
 		close(conn);
 		return volist;
+		
 	}
-	public MemberVo selectOne(String id){
-		MemberVo vo = null;
+	
+	public ProductVo selectOne(int product_no) {
+		ProductVo vo = null;
 		Connection conn = getConnection();
-		vo = dao.selectOne(conn, id);
+		vo = dao.selectOne(conn, product_no);
 		close(conn);
 		return vo;
 	}
-	public MemberVo login(String id, String pw){
-		MemberVo vo = null;
+	public ProductVo Cart(int product_no, String product_name, String product_price ,String product_desc) {
+		ProductVo vo = null;
 		Connection conn = getConnection();
-		vo = dao.login(conn, id, pw );
+		vo = dao.Cart(conn, product_no, product_name, product_price, product_desc);
 		close(conn);
 		return vo;
 	}
-
+	
 }
