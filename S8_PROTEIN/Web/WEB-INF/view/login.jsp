@@ -38,8 +38,8 @@
                                                             class="sc-hNKHps jrmRXf 
               
             
-                        "><span aria-hidden="true" class="sc-bUbCnL dtlFyh">*</span><span class="sc-kIKDeO bUCCSu">이메일
-                                                                주소</span></span></label>
+                        "><span aria-hidden="true" class="sc-bUbCnL dtlFyh">*</span><span class="sc-kIKDeO bUCCSu">아이디
+                                                               </span></span></label>
                                                     <div label="이메일 주소" required="" type="email"
                                                         class="sc-kgUAyh sc-hTtwUo sc-fXynhf hYTGCI gVfYNE eWCOng">
                                                         <input type="email" label="이메일 주소" required="" dir="ltr"
@@ -89,7 +89,7 @@
                                         </div>
                                         <br>
                                         <div class="sc-iqcoie jSZcAb sc-crXcEl lfbenK sc-dkdnUF eMmNOE"><a
-                                            href="/protein/join.html"
+                                            href="WEB-INF/view/login.jsp"
                                             data-testid="guest-journey-button" class="sc-kDDrLX fRJwnl">등록</a></div>
                                 </div>
                                     </form>

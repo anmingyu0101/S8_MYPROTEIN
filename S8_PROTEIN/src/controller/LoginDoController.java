@@ -12,7 +12,7 @@ import member.model.vo.*;
 /**
  * Servlet implementation class LoginDoController
  */
-@WebServlet("/LoginDoController")
+@WebServlet("/login.do")
 public class LoginDoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,24 +31,22 @@ public class LoginDoController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			String id = request.getParameter("id");
 			String pw = request.getParameter("pw");
-		
 			
-			MemberService service = new MemberService();
-			MemberVo loginInfo = service.login(id, pw);
-			if(loginInfo!=null) {
-//				if(loginInfo.getMauthcode().equals("1")) {
-//					System.out.println("로그인 성공");
-//					request.getSession().setAttribute("loginSsInof", loginInfo);
-//					response.sendRedirect(request.getContextPath()+"/main");
-//				}else if (loginInfo.getMauthcode().equals("0")) {
-//					System.out.println("로그인 인증 전");
-//				}else {
-//					System.out.println("인증코드 확인");
-//				}
-//			}else {
-//				response.sendRedirect(request.getContextPath()+"/main");
-//				System.out.println("로그인 실패");
+			MemberVo vo = new MemberVo();
+			vo.setId(id);
+			vo.setPw(pw);
+		
+			System.out.println(vo);
+			int result = new MemberService().insert(vo);
+			if(result > 0) {
+				System.out.println("로그인 성공");
+				response.sendRedirect(request.getContextPath()+"/main");
+			} else {
+				System.out.println("로그인 실패");
+				 response.sendRedirect(request.getContextPath()+"/login");
 			}
+			
+			
 	}
 
 }
