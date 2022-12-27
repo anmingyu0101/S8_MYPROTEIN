@@ -9,7 +9,7 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1"
  </welcome-file-list>
  <filter>
  <filter-name>EncodingFilter</filter-name>
- <filter-class>common.filter.EncodingFilter</filter-class>
+ <filter-class>kh.s8.protein.common.filter.EncodingFilter</filter-class>
  </filter>
  <filter-mapping>
  <filter-name>EncodingFilter</filter-name>
