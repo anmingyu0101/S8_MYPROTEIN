@@ -29,11 +29,11 @@ public class LoginDoController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			String id = request.getParameter("id");
+			String email = request.getParameter("email");
 			String pw = request.getParameter("pw");
 			
 			MemberVo vo = new MemberVo();
-			vo.setId(id);
+			vo.setEmail(email);
 			vo.setPw(pw);
 		
 			System.out.println(vo);

@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
-<link rel="stylesheet" href="/protein/css/login.css">
-<link rel="stylesheet" href="/protein/css/join.css">
+
+
 </head>
 <body>
 
@@ -24,7 +24,7 @@
                             <div class="sc-BeQoi fboqB">
                                 <div class="sc-BeQoi fboqB">
                                     <h1 data-testid="login-title" class="sc-djvmMF eklMse">고객 로그인</h1>
-                                    <form novalidate="" method="POST"><input type="hidden" name="_csrf"
+                                    <form action="main.jsp" method="POST"><input type="hidden" name="_csrf"
                                             value="BmSYUTgB-53PeHsUPBpSfl29ZxWOof1rLbtw">
                                         <div role="log" aria-live="assertive" aria-relevant="additions"
                                             aria-atomic="true" class="sc-efBctP hLxiRQ"></div>
@@ -38,14 +38,14 @@
                                                             class="sc-hNKHps jrmRXf 
               
             
-                        "><span aria-hidden="true" class="sc-bUbCnL dtlFyh">*</span><span class="sc-kIKDeO bUCCSu">아이디
+                        "><span aria-hidden="true" class="sc-bUbCnL dtlFyh">*</span><span class="sc-kIKDeO bUCCSu">이메일 주소
                                                                </span></span></label>
                                                     <div label="이메일 주소" required="" type="email"
                                                         class="sc-kgUAyh sc-hTtwUo sc-fXynhf hYTGCI gVfYNE eWCOng">
                                                         <input type="email" label="이메일 주소" required="" dir="ltr"
                                                             data-testid="이메일-주소-input-element-id-7ea6f72b-8c59-4439-9b81-1d8c0c211f94"
                                                             id="이메일-주소-input-element-id-7ea6f72b-8c59-4439-9b81-1d8c0c211f94"
-                                                            value="" name="이메일 주소" autocomplete="off"
+                                                            value="" name="email" autocomplete="off"
                                                             class="sc-dwLEzm cFXWru">
                                                         <div label="이메일 주소" required="" type="email"
                                                             class="sc-kgUAyh sc-hTtwUo sc-jIAOiI hYTGCI gVfYNE iWXjVh">
@@ -71,7 +71,7 @@
                                                         <input type="password" label="비밀번호" required="" dir="ltr"
                                                             data-testid="비밀번호-input-element-id-a9756fb3-d6b3-4aae-978c-2b926b91b85c"
                                                             id="비밀번호-input-element-id-a9756fb3-d6b3-4aae-978c-2b926b91b85c"
-                                                            value="" name="비밀번호" autocomplete="off"
+                                                            value="" name="pw" autocomplete="off"
                                                             class="sc-dwLEzm cFXWru">
                                                         <div label="비밀번호" required="" type="password"
                                                             class="sc-kgUAyh sc-hTtwUo sc-jIAOiI hYTGCI gVfYNE iWXjVh">
@@ -88,6 +88,7 @@
                                                     class="sc-ezWOiH DMLIm">로그인</button></div>
                                         </div>
                                         <br>
+                                        
                                         <div class="sc-iqcoie jSZcAb sc-crXcEl lfbenK sc-dkdnUF eMmNOE"><a
                                             href="WEB-INF/view/login.jsp"
                                             data-testid="guest-journey-button" class="sc-kDDrLX fRJwnl">등록</a></div>
