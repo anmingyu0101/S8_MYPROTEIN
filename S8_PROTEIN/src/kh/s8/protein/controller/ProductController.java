@@ -33,8 +33,11 @@ public class ProductController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ProductService service = new ProductService();
 		List<ProductVo> volist = service.selectList();
+		System.out.println("=====================");
+		System.out.println(volist);
+		System.out.println("=====================");
 		request.setAttribute("productlist", volist);
-		String viewPath = "WEB-INF/view/product.jsp";
+		String viewPath = "/WEB-INF/view/product.jsp";
 		request.getRequestDispatcher(viewPath).forward(request, response);
 	}
 

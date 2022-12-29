@@ -6,7 +6,10 @@ import java.util.List;
 import kh.s8.protein.product.image.model.ProductImageVo;
 
 public class ProductVo {
- 
+//	PRODUCT_NO    NOT NULL NUMBER        
+//	PRODUCT_NAME           VARCHAR2(30)  
+//	PRODUCT_PRICE          VARCHAR2(10)  
+//	PRODUCT_DESC           VARCHAR2(100) 
 	private int product_no;
 	private String product_name;
 	private int product_price;

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -329,9 +330,21 @@
 <%-- 제품 --%>
     <main id="mainContent">
         따끈따끈🔥 NEW 신제품
-
-        </h2>
-
+        <c:forEach items="${productlist}" var="vo">
+        	<br>
+	        ${vo. product_no}
+	        <br>
+	        ${vo. product_name}
+	        <br>
+	        ${vo. product_price}
+	        <br>
+	        ${vo. product_desc}
+        	<br>
+        	<c:forEach items="${vo.product_image_list }" var="pimg" >
+        		<img src="${pimg. product_img}" width="200" height="200">
+        	<br>
+        	</c:forEach>
+		</c:forEach>
 
         <ul class="fourBestSellers_itemContainer" aria-labelledby="fourBestSellers_title-4054883">
 

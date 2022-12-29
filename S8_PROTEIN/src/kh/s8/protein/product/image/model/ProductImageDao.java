@@ -27,7 +27,7 @@ public class ProductImageDao {
 	public List<ProductImageVo> selectList(Connection conn, int product_no){
 		List<ProductImageVo> volist = null;
 		
-		String sql = "select * from productimage where product_no =?";
+		String sql = "select * from PRODUCT_IMAGE where PRODUCT_NO =?";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
@@ -37,9 +37,12 @@ public class ProductImageDao {
 			if(rs.next()) {
 				volist = new ArrayList<ProductImageVo>();
 				do {
+//					table명 PRODUCT_IMAGE 
+//					PRODUCT_IMG NOT NULL VARCHAR2(500) 
+//					PRODUCT_NO  NOT NULL NUMBER  
 					ProductImageVo vo = new ProductImageVo();
-					vo.setProduct_no(rs.getInt("prodcut_no"));
-					vo.setProduct_img(rs.getString("product_img"));
+					vo.setProduct_no(rs.getInt("PRODUCT_NO"));
+					vo.setProduct_img(rs.getString("PRODUCT_IMG"));
 					volist.add(vo);
 				
 			}while(rs.next());

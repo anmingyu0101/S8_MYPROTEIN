@@ -87,14 +87,16 @@ public class ProductDao {
 				if(rs.next()) {
 					volist = new ArrayList<ProductVo>();
 					do {
+//						PRODUCT_NO    NOT NULL NUMBER        
+//						PRODUCT_NAME           VARCHAR2(30)  
+//						PRODUCT_PRICE          VARCHAR2(10)  
+//						PRODUCT_DESC           VARCHAR2(100) 
 						ProductVo vo = new ProductVo();
-						vo.setProduct_no(rs.getInt("product_no"));
-						vo.setProduct_name(rs.getString("prodcut_name"));
-						vo.setProduct_desc(rs.getString("product_desc"));
-						vo.setProduct_price(rs.getInt("product_price"));
-						pstmt.setString(1, vo.getProduct_name());
-						pstmt.setInt(2, vo.getProduct_price());
-						pstmt.setString(3, vo.getProduct_desc());
+						vo.setProduct_no(rs.getInt("PRODUCT_NO"));
+						vo.setProduct_name(rs.getString("PRODUCT_NAME"));
+						vo.setProduct_desc(rs.getString("PRODUCT_DESC"));
+						vo.setProduct_price(rs.getInt("PRODUCT_PRICE"));
+
 						volist.add(vo);
 					
 				}while(rs.next());

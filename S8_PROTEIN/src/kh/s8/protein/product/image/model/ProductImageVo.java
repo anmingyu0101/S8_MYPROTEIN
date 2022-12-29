@@ -3,6 +3,9 @@ package kh.s8.protein.product.image.model;
 import java.sql.*;
 
 public class ProductImageVo {
+//	table명 PRODUCT_IMAGE 
+//	PRODUCT_IMG NOT NULL VARCHAR2(500) 
+//	PRODUCT_NO  NOT NULL NUMBER  
 	private String product_img;
 	private int product_no;
 	@Override

@@ -49,6 +49,7 @@ public class ProductService {
 			volist.get(i).setProduct_image_list(daoImage.selectList(conn, volist.get(i).getProduct_no()));
 			}
 		}
+		
 		close(conn);
 		return volist;
 		
