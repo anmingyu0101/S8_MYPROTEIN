@@ -11,6 +11,7 @@
 
 </head>
 <body>
+
 <html lang="ko" style="background-color: #f2f2f2"></html>
 <div data-testid="simple-header-cover" class="sc-kgflAQ gZkxJJ">
         <div class="sc-fLlhyt jaFRrD"><a aria-label="Myprotein South Korea 홈 페이지" data-testid="logo-link" href="/protein/main.html"
@@ -325,6 +326,7 @@
     </div>
 
 
+<%-- 제품 --%>
     <main id="mainContent">
         따끈따끈🔥 NEW 신제품
 
@@ -362,12 +364,6 @@
 
               <div class="athenaProductBlock_priceBlock">
 
-                <div class="athenaProductBlock_rrp">
-
-                  <span class="athenaProductBlock_rrpLabel">기존가격:</span>
-                  <span class="athenaProductBlock_rrpValue" id="rrp-value" data-rrp="₩29,900">₩29,900</span>
-
-                </div>
 
 
                 <div class="athenaProductBlock_price">
@@ -407,12 +403,6 @@
 
               <div class="athenaProductBlock_priceBlock">
 
-                <div class="athenaProductBlock_rrp">
-
-                  <span class="athenaProductBlock_rrpLabel">기존가격:</span>
-                  <span class="athenaProductBlock_rrpValue" id="rrp-value" data-rrp="₩39,900">₩39,900</span>
-
-                </div>
 
 
                 <div class="athenaProductBlock_price">
@@ -452,12 +442,6 @@
 
               <div class="athenaProductBlock_priceBlock">
 
-                <div class="athenaProductBlock_rrp">
-
-                  <span class="athenaProductBlock_rrpLabel">기존가격:</span>
-                  <span class="athenaProductBlock_rrpValue" id="rrp-value" data-rrp="₩29,900">₩29,900</span>
-
-                </div>
 
 
                 <div class="athenaProductBlock_price">
@@ -497,12 +481,6 @@
 
               <div class="athenaProductBlock_priceBlock">
 
-                <div class="athenaProductBlock_rrp">
-
-                  <span class="athenaProductBlock_rrpLabel">기존가격:</span>
-                  <span class="athenaProductBlock_rrpValue" id="rrp-value" data-rrp="₩65,900">₩65,900</span>
-
-                </div>
 
                 <div class="athenaProductBlock_price">
                   <span class="athenaProductBlock_priceCurrency" content=""></span>

@@ -5,10 +5,9 @@ import java.sql.*;
 public class ProductImageVo {
 	private String product_img;
 	private int product_no;
-	private int count;
 	@Override
 	public String toString() {
-		return "ProductImageVo [product_img=" + product_img + ", product_no=" + product_no + ", count=" + count + "]";
+		return "ProductImageVo [product_img=" + product_img + ", product_no=" + product_no + "]";
 	}
 	public String getProduct_img() {
 		return product_img;
@@ -22,11 +21,4 @@ public class ProductImageVo {
 	public void setProduct_no(int product_no) {
 		this.product_no = product_no;
 	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
-
 }

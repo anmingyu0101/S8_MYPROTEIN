@@ -5,9 +5,13 @@ import static kh.s8.protein.common.jdbc.JdbcTemplate.*;
 import java.sql.Connection;
 import java.util.List;
 
+import kh.s8.protein.product.image.model.ProductImageDao;
+import kh.s8.protein.product.image.model.ProductImageVo;
+
 
 public class ProductService {
 	private ProductDao dao = new ProductDao();
+	private ProductImageDao daoImage = new ProductImageDao();
 	
 	public int insert(ProductVo vo) {
 		int result = 0;
@@ -40,6 +44,11 @@ public class ProductService {
 		List<ProductVo> volist = null;
 		Connection conn = getConnection();
 		volist = dao.selectList(conn);
+		if(volist != null) {
+			for(int i = 0; i <volist.size(); i++) {
+			volist.get(i).setProduct_image_list(daoImage.selectList(conn, volist.get(i).getProduct_no()));
+			}
+		}
 		close(conn);
 		return volist;
 		
@@ -49,9 +58,14 @@ public class ProductService {
 		ProductVo vo = null;
 		Connection conn = getConnection();
 		vo = dao.selectOne(conn, product_no);
+		if(vo != null) {
+			vo.setProduct_image_list(daoImage.selectList(conn, vo.getProduct_no()));
+		}
 		close(conn);
 		return vo;
 	}
+	
+	
 	public ProductVo Cart(int product_no, String product_name, String product_price ,String product_desc) {
 		ProductVo vo = null;
 		Connection conn = getConnection();

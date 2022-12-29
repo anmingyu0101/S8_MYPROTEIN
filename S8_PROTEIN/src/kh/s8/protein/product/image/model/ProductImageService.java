@@ -42,10 +42,10 @@ public class ProductImageService {
 		close(conn);
 		return vo;
 	}
-	public ProductImageVo Product(String product_img, int product_no,int count) {
+	public ProductImageVo Product(String product_img, int product_no) {
 		ProductImageVo vo = null;
 		Connection conn = getConnection();
-		vo = dao.Product(conn, product_img, product_no, count);
+		vo = dao.Product(conn, product_img, product_no);
 		close(conn);
 		return vo;
 	}
