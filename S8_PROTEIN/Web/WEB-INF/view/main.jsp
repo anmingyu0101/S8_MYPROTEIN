@@ -53,7 +53,6 @@
                 <ul class="responsiveAccountHeader_accountGroup">
                   <li
                     class="responsiveAccountHeader_accountListItem responsiveAccountHeader_accountListButtonItem responsiveAccountHeader_accountListButtonItem-first">
-
                     <a href="/protein/login.html" class="responsiveAccountHeader_accountLogin js-e2e-sign-in"
                       data-context="login">
                       로그인
@@ -61,7 +60,7 @@
                   </li>
                   <li class="responsiveAccountHeader_accountListItem responsiveAccountHeader_accountListButtonItem">
 
-                    <a href="/protein/join.jsp" class="responsiveAccountHeader_accountRegister"
+                    <a href="/protein/join" class="responsiveAccountHeader_accountRegister"
                       data-context="register">
                       가입하기
                     </a>

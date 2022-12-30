@@ -4,10 +4,10 @@ public class CartProductVo {
 
 	private int member_no;
 	private int product_no;
-	private int count;
+	private int amount;
 	@Override
 	public String toString() {
-		return "CartProductVo [member_no=" + member_no + ", product_no=" + product_no + ", count=" + count + "]";
+		return "CartProductVo [member_no=" + member_no + ", product_no=" + product_no + ", amount=" + amount + "]";
 	}
 	public int getMember_no() {
 		return member_no;
@@ -21,10 +21,12 @@ public class CartProductVo {
 	public void setProduct_no(int product_no) {
 		this.product_no = product_no;
 	}
-	public int getCount() {
-		return count;
+	public int getAmount() {
+		return amount;
 	}
-	public void setCount(int count) {
-		this.count = count;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
+	
 }
+
