@@ -18,19 +18,19 @@ public class MemberService {
 		return result;
 		
 	}
-	public int update(MemberVo vo, String id) {
+	public int update(MemberVo vo, String email) {
 		int result = 0;
 		Connection conn = getConnection();
-		result = dao.update(conn, vo, id);
+		result = dao.update(conn, vo, email);
 		if(result > 0) commit(conn);
 		else rollback(conn);
 		close(conn);
 		return result;
 	}
-	public int delete(String id) {
+	public int delete(String email) {
 		int result = 0;
 		Connection conn = getConnection();
-		result = dao.delete(conn, id);
+		result = dao.delete(conn, email);
 		if(result > 0) commit(conn);
 		else rollback(conn);
 		close(conn);	
@@ -43,17 +43,17 @@ public class MemberService {
 		close(conn);
 		return volist;
 	}
-	public MemberVo selectOne(String id){
+	public MemberVo selectOne(String email){
 		MemberVo vo = null;
 		Connection conn = getConnection();
-		vo = dao.selectOne(conn, id);
+		vo = dao.selectOne(conn, email);
 		close(conn);
 		return vo;
 	}
-	public MemberVo login(String id, String pw){
+	public MemberVo login(String email, String pw){
 		MemberVo vo = null;
 		Connection conn = getConnection();
-		vo = dao.login(conn, id, pw );
+		vo = dao.login(conn, email, pw );
 		close(conn);
 		return vo;
 	}

@@ -57,7 +57,7 @@ public class MemberDao {
 	public MemberVo login(Connection conn, String id, String pw){
 		MemberVo vo = null;
 		
-		String query = "select id, name from member where id=? and pw=?";
+		String query = "select id, name from member where email=? and pw=?";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
@@ -68,8 +68,8 @@ public class MemberDao {
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				vo = new MemberVo();
-				vo.setId(rs.getString(id));
-//				vo.setName(rs.getString(Name));
+				vo.setId(rs.getString("id"));
+//				vo.setName(rs.getString("Name"));
 			}
 				
 			}catch(Exception e) {

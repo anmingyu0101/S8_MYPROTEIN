@@ -46,10 +46,10 @@ public class JoinDoController extends HttpServlet {
 		int result = new MemberService().insert(vo);
 		if(result > 0) {
 			System.out.println("회원가입 성공");
-			response.sendRedirect(request.getContextPath()+"/main");
+			response.sendRedirect(request.getContextPath()+"/login");
 		} else {
 			System.out.println("회원가입 실패");
-			response.sendRedirect(request.getContextPath()+"/login");
+			response.sendRedirect(request.getContextPath()+"/main");
 		}
 	
 	}

@@ -24,7 +24,7 @@
                             <div class="sc-BeQoi fboqB">
                                 <div class="sc-BeQoi fboqB">
                                     <h1 data-testid="login-title" class="sc-djvmMF eklMse">고객 로그인</h1>
-                                    <form action="main.jsp" method="POST"><input type="hidden" name="_csrf"
+                                    <form action="login.do" method="POST"><input type="hidden" name="_csrf"
                                             value="BmSYUTgB-53PeHsUPBpSfl29ZxWOof1rLbtw">
                                         <div role="log" aria-live="assertive" aria-relevant="additions"
                                             aria-atomic="true" class="sc-efBctP hLxiRQ"></div>

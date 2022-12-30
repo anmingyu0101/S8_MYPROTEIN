@@ -8,6 +8,14 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1"
  <welcome-file>/WEB-INF/login.jsp</welcome-file>
  </welcome-file-list>
 
+<!-- 하나의 서블릿 역할
+<servlet>
+	<servlet-name>LoginContreoller</servlet-name>
+	<servlet-class>kh.s8.protein.controller.LoginContreoller</servlet-class>
+</servlet>
+ -->
+
+
  <filter>
  <filter-name>EncodingFilter</filter-name>
  <filter-class>kh.s8.protein.common.filter.EncodingFilter</filter-class>

@@ -31,20 +31,23 @@ public class LoginDoController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			String email = request.getParameter("email");
 			String pw = request.getParameter("pw");
+			System.out.println("=========로그인");
+			System.out.println(email);
+			System.out.println(pw);
 			
-			MemberVo vo = new MemberVo();
-			vo.setEmail(email);
-			vo.setPw(pw);
-		
-			System.out.println(vo);
-			int result = new MemberService().insert(vo);
-			if(result > 0) {
-				System.out.println("로그인 성공");
+			MemberService service = new MemberService();
+			MemberVo loginInfo = service.login(email, pw);
+			
+			if(loginInfo != null) {
+				System.out.println("로그인성공");
+				request.getSession().setAttribute("loginInfo", loginInfo);
 				response.sendRedirect(request.getContextPath()+"/main");
-			} else {
+				
+			}else {
 				System.out.println("로그인 실패");
-				 response.sendRedirect(request.getContextPath()+"/login");
+				response.sendRedirect(request.getContextPath()+"/main");
 			}
+			
 			
 			
 	}
