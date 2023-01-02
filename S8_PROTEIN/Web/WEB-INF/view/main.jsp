@@ -53,14 +53,14 @@
                 <ul class="responsiveAccountHeader_accountGroup">
                   <li
                     class="responsiveAccountHeader_accountListItem responsiveAccountHeader_accountListButtonItem responsiveAccountHeader_accountListButtonItem-first">
-                    <a href="/protein/login.html" class="responsiveAccountHeader_accountLogin js-e2e-sign-in"
+                    <a href="${pageContext.request.contextPath }/login" class="responsiveAccountHeader_accountLogin js-e2e-sign-in"
                       data-context="login">
                       로그인
                     </a>
                   </li>
                   <li class="responsiveAccountHeader_accountListItem responsiveAccountHeader_accountListButtonItem">
 
-                    <a href="/protein/join" class="responsiveAccountHeader_accountRegister"
+                    <a href="${pageContext.request.contextPath }/join" class="responsiveAccountHeader_accountRegister"
                       data-context="register">
                       가입하기
                     </a>
@@ -104,7 +104,7 @@
 
           </button>
           <div class="responsiveFlyoutBasket_openBasketPanel" data-js-element="responsiveFlyoutBasket_openBasketPanel">
-            <a class="responsiveFlyoutBasket_basketButton" href="/my.basket" aria-label=" 장바구니">
+            <a class="responsiveFlyoutBasket_basketButton" href="${pageContext.request.contextPath }/cart" aria-label=" 장바구니">
               <span class="responsiveFlyoutBasket_icon_container">
                 <svg class="responsiveFlyoutBasket_icon responsiveFlyoutBasket_icon-basket" width="24" height="24"
                   viewBox="0 0 24 24">
@@ -146,6 +146,7 @@
 
       </div>
 
+<%--
       <div class="westendHeader_navigation">
         <nav class="responsiveFlyoutMenu " data-component="responsiveFlyoutMenu" data-component-tracked-clicked="">
           <p id="accessibility-nav-help" class="visually-hidden responsiveFlyoutMenu_accessibilityNavHelp">
@@ -197,6 +198,9 @@
             <div class="responsiveFlyoutMenu_mobilePanel_levelThree"></div>
           </div>
       </div>
+      
+      
+      
       <div class="responsiveFlyoutMenu_menuUnderlay" data-js-element="smallMenuUnderlay"></div>
       </nav>
 
@@ -217,7 +221,7 @@
         <div class="responsiveUsp_navDot"></div>
       </div>
     </div>
-
+ --%>
 
 
     </header>
@@ -383,5 +387,6 @@
           </li>
         </ul>
       </div>
+     
 </body>
 </html>

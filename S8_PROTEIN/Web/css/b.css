@@ -1,0 +1,116 @@
+@charset "UTF-8";
+.athenaBasket_empty {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.athenaBasket_empty {
+    box-sizing: border-box;
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100%;
+}
+
+.athenaBasket_headerTitle-empty {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.athenaBasket_headerTitle-empty {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.athenaBasket_headerTitle-empty {
+    box-sizing: border-box;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: auto;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    padding-bottom: 8px;
+}
+
+.athenaBasket_emptyBasketMessage {
+    font-family: Biotif,"Noto Sans","Noto Sans JP","Noto Sans KR",Helvetica;
+    font-weight: 400;
+    font-size: 1.61rem;
+    line-height: 2rem;
+    color: #1a1a1a;
+    text-transform: none;
+    letter-spacing: -.5px;
+    display: block;
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 16px;
+}
+
+.p{
+	    font-size: 16px;
+    line-height: 16px;
+    font-weight: inherit;
+    font-style: inherit;
+    text-indent: 0;
+    text-decoration: none;
+    white-space: normal;
+    margin: 0;
+    padding: 0;
+    height: initial;
+    border: 0;
+    background: 0 0;
+    list-style: none;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    border-spacing: 0;
+    content: '';
+    content: none;
+    quotes: none;
+    box-sizing: border-box;
+}
+
+.athenaBasket_emptyContinueShoppingButton {
+    width: auto;
+}
+
+.athenaBasket_emptyContinueShoppingButton {
+    background: #008190;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #008190;
+    border-radius: 3px;
+    font-family: Biotif,"Noto Sans","Noto Sans JP","Noto Sans KR",Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    color: #fff;
+    line-height: 1.5rem;
+    display: inline-flex;
+    text-decoration: none;
+    transition: background .2s;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 1px 0 #00262a;
+    white-space: nowrap;
+    width: auto;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}

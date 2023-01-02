@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class JoinController
+ * Servlet implementation class CartInsertController
  */
-@WebServlet("/join")
-public class JoinController extends HttpServlet {
+@WebServlet("/CartInsertController")
+public class CartInsertController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public JoinController() {
+    public CartInsertController() {
         super();
     }
 
@@ -25,10 +25,9 @@ public class JoinController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String viewpath = "WEB-INF/view/join.jsp";
-		request.getRequestDispatcher(viewpath).forward(request, response);
+		String viewPath="WEB-INF/view/cart.jsp";
+		request.getRequestDispatcher(viewPath).forward(request, response);
 	}
-
 
 
 }
